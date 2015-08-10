@@ -1,0 +1,41 @@
+{#
+Layout template
+
+Expects variables:
+
+page.slug
+page.title
+page.numTabs
+
+#}
+<div class="page page-tabs">
+  <h1 class="page-title">{{page.title}}</h1>
+  <div class="page-content page-tabs-content">
+    {% if (page.numTabs >= 1) %}
+    <div class="tab-1-content">
+    {%block tab-1-content %}<!-- BLANK -->{% endblock %}
+    </div>
+    {% endif %}
+    {% if (page.numTabs >= 2) %}
+    <div class="tab-2-content">
+    {%block tab-2-content %}<!-- BLANK -->{% endblock %}
+    </div>
+    {% endif %}
+    {% if (page.numTabs >= 3) %}
+    <div class="tab-3-content">
+    {%block tab-3-content %}<!-- BLANK -->{% endblock %}
+    </div>
+    {% endif %}
+    {% if (page.numTabs >= 4) %}
+    <div class="tab-4-content">
+    {%block tab-4-content %}<!-- BLANK -->{% endblock %}
+    </div>
+    {% endif %}
+    {% if (page.numTabs >= 5) %}
+    <div class="tab-5-content">
+    {%block tab-5-content %}<!-- BLANK -->{% endblock %}
+    </div>
+    {% endif %}
+  </div>
+
+</div>

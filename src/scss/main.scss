@@ -1,3 +1,24 @@
+@import "../../bower_components/normalize-scss/_normalize.scss";
+
 body {
+  color: #4d4d4f;
   background-color: white;
+}
+
+$color-dirt: #c88028;
+$color-plastic: #33935e;
+
+.page {
+}
+
+.page-title {
+  color: $color-dirt;
+  font-size: 45px;
+  font-weight: 400;
+}
+
+.page-content {
+  border: rgba(#000, 0.2) solid 10px;
+  background-color: #fff;
+  font-size: 16px;
 }
