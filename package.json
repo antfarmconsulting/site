@@ -1,0 +1,11 @@
+{
+  "name": "ant-farm-consulting",
+  "version": "0.0.1",
+  "license": "©2015",
+  "private": true,
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-swig": "^0.7.4"
+  }
+}
