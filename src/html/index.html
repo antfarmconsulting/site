@@ -6,8 +6,41 @@
 </head>
 <body>
 
+  <div class="navigation">
+    <ul>
+      <li class="label-row">
+        <h1 class="logo"><span>Ant Farm Consulting Inc.</span></h1>
+      </li>
+      <li>
+        <a href="#about">About</a>
+      </li>
+      <li>
+        <a href="#services">Services</a>
+      </li>
+      <li>
+        <a href="#specialties">Specialties</a>
+      </li>
+      <li>
+        <a href="#clients">Clients</a>
+      </li>
+      <li>
+        <a href="#contact">Contact</a>
+      </li>
+      <li class="label-row">
+        <span>Blogs:</span>
+      </li>
+      <li>
+        <a rel="external" href="http://www.marketmambo.com">Market Mambo</a>
+      </li>
+      <li>
+        <a rel="external" href="http://www.kulturekat.com">Kulture Kat</a>
+      </li>
+
+    </ul>
+  </div>
+
   <!-- HOME -->
-  <h1>Ant Farm Consulting Inc.</h1>
+  {% include '_pages/home.html' %}
 
   <!-- ABOUT -->
   {% include '_pages/about.html' %}

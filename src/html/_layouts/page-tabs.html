@@ -8,7 +8,7 @@ page.title
 page.numTabs
 
 #}
-<div class="page page-tabs">
+<div id="{{page.slug}}" class="page page-tabs page-{{page.slug}}">
   <h1 class="page-title">{{page.title}}</h1>
   <div class="page-content page-tabs-content">
     {% if (page.numTabs >= 1) %}
