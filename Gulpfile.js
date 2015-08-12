@@ -1,11 +1,18 @@
 var gulp = require('gulp'),
   sass = require('gulp-sass'),
   swig = require('gulp-swig'),
-  webserver = require('gulp-webserver');
+  webserver = require('gulp-webserver'),
+  YAML = require('yamljs');
 
 gulp.task('html', [], function () {
+  var clientsData = YAML.load('./src/data/clients.yaml');
+
+  console.log(clientsData);
   return gulp.src('src/html/*.html')
     .pipe(swig({
+      data: {
+        clients: clientsData
+      },
       defaults: {
         cache: false
       }
