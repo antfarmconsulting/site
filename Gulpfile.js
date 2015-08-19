@@ -20,6 +20,14 @@ gulp.task('html', [], function () {
     .pipe(gulp.dest('build'));
 });
 
+gulp.task('copyflat', [], function () {
+  return gulp
+    .src([
+      'src/img/**/*'
+    ])
+      .pipe(gulp.dest('build/img'));
+});
+
 gulp.task('sass', [], function () {
   return gulp.src('src/scss/**/*')
     .pipe(sass())
@@ -36,4 +44,4 @@ gulp.task('dev', ['build', 'watch'], function () {
     .pipe(webserver());
 });
 
-gulp.task('build', ['html', 'sass']);
+gulp.task('build', ['html', 'sass', 'copyflat']);
