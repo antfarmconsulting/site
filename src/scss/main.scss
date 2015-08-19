@@ -1,12 +1,57 @@
+$color-dirt: #c88028;
+$color-plastic: #33935e;
+$font-family-sans-serif: 'Open Sans', sans-serif;
+$font-family-serif: 'Georgia', serif;
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,600,300italic,600italic);
+
 @import "../../bower_components/normalize-scss/_normalize.scss";
 
+
 body {
+  //Type defaults
   color: #4d4d4f;
+  font-family: $font-family-sans-serif;
+  font-weight: 300;
+
+  //Style
+
   background-color: white;
 }
 
-$color-dirt: #c88028;
-$color-plastic: #33935e;
+b,
+strong {
+  font-weight: 600;
+}
+
+a {
+  &,
+  &:focus,
+  &:hover {
+    color: $color-dirt;
+  }
+
+  & {
+    text-decoration: none;
+  }
+
+  &:focus,
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.bold-serif,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-serif;
+  font-weight: 800;
+}
+
 
 .page {
 }
@@ -14,7 +59,6 @@ $color-plastic: #33935e;
 .page-title {
   color: $color-dirt;
   font-size: 45px;
-  font-weight: 400;
 }
 
 .page-content {
@@ -22,3 +66,6 @@ $color-plastic: #33935e;
   background-color: #fff;
   font-size: 16px;
 }
+
+@import "patterns/homepage";
+@import "patterns/navigation";
