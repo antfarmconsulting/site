@@ -38,7 +38,7 @@ gulp.task('watch', function () {
   return gulp.watch('src/**/*', ['build']);
 });
 
-gulp.task('dev', ['build', 'watch'], function () {
+gulp.task('workspace', ['build', 'watch'], function () {
   return gulp
     .src('build')
     .pipe(webserver());

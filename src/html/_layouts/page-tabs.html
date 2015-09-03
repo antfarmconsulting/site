@@ -10,32 +10,19 @@ page.numTabs
 #}
 <div id="{{page.slug}}" class="page page-tabs page-{{page.slug}}">
   <h1 class="page-title">{{page.title}}</h1>
+  <div class="page-tabs-tabs">
+    {%block tab-1-handle %}{# BLANK #}{% endblock %}
+    {%block tab-2-handle %}{# BLANK #}{% endblock %}
+    {%block tab-3-handle %}{# BLANK #}{% endblock %}
+    {%block tab-4-handle %}{# BLANK #}{% endblock %}
+    {%block tab-5-handle %}{# BLANK #}{% endblock %}
+  </div>
   <div class="page-content page-tabs-content">
-    {% if (page.numTabs >= 1) %}
-    <div class="tab-1-content">
-    {%block tab-1-content %}<!-- BLANK -->{% endblock %}
-    </div>
-    {% endif %}
-    {% if (page.numTabs >= 2) %}
-    <div class="tab-2-content">
-    {%block tab-2-content %}<!-- BLANK -->{% endblock %}
-    </div>
-    {% endif %}
-    {% if (page.numTabs >= 3) %}
-    <div class="tab-3-content">
-    {%block tab-3-content %}<!-- BLANK -->{% endblock %}
-    </div>
-    {% endif %}
-    {% if (page.numTabs >= 4) %}
-    <div class="tab-4-content">
-    {%block tab-4-content %}<!-- BLANK -->{% endblock %}
-    </div>
-    {% endif %}
-    {% if (page.numTabs >= 5) %}
-    <div class="tab-5-content">
-    {%block tab-5-content %}<!-- BLANK -->{% endblock %}
-    </div>
-    {% endif %}
+    {%block tab-1-content %}{# BLANK #}{% endblock %}
+    {%block tab-2-content %}{# BLANK #}{% endblock %}
+    {%block tab-3-content %}{# BLANK #}{% endblock %}
+    {%block tab-4-content %}{# BLANK #}{% endblock %}
+    {%block tab-5-content %}{# BLANK #}{% endblock %}
   </div>
 
 </div>
