@@ -1,4 +1,4 @@
-$color-dirt: #c88028;
+  $color-dirt: #c88028;
 $color-plastic: #33935e;
 $font-family-sans-serif: 'Open Sans', sans-serif;
 $font-family-serif: 'Georgia', serif;
@@ -66,6 +66,8 @@ h6 {
   background-color: #fff;
   font-size: 16px;
 }
+
+@import "patterns/tabs";
 
 @import "patterns/homepage";
 @import "patterns/navigation";

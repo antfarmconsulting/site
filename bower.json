@@ -4,6 +4,7 @@
   "license": "©2015",
   "private": true,
   "dependencies": {
-    "normalize-scss": "~3.0.3"
+    "normalize-scss": "~3.0.3",
+    "jquery": "1"
   }
 }
