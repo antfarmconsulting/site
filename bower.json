@@ -1,7 +1,5 @@
 {
-  "name": "ant-farm-consulting",
-  "version": "0.0.1",
-  "license": "©2015",
+  "name": "antfarm-consulting-site",
   "private": true,
   "dependencies": {
     "normalize-scss": "~3.0.3",

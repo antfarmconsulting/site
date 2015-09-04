@@ -1,7 +1,7 @@
 {
-  "name": "ant-farm-consulting",
+  "name": "antfarm-consulting-site",
   "version": "0.0.1",
-  "license": "©2015",
+  "license": "©2015 Antfarm Consulting",
   "private": true,
   "devDependencies": {
     "gulp": "^3.9.0",
@@ -10,5 +10,9 @@
     "gulp-swig": "^0.7.4",
     "gulp-webserver": "^0.9.1",
     "yamljs": "^0.2.3"
+  },
+  "repository" : {
+    "type": "git",
+    "url": "https://github.com/antfarmconsulting/site.git"
   }
 }
