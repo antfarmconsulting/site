@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+  autoprefixer = require('gulp-autoprefixer'),
   concat = require('gulp-concat'),
   sass = require('gulp-sass'),
   swig = require('gulp-swig'),
@@ -32,6 +33,7 @@ gulp.task('copyflat', [], function () {
 gulp.task('sass', [], function () {
   return gulp.src('src/scss/**/*')
     .pipe(sass())
+    .pipe(autoprefixer())
     .pipe(gulp.dest('build/css'));
 });
 
