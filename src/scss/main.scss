@@ -1,16 +1,26 @@
   $color-dirt: #c88028;
 $color-plastic: #33935e;
+$color-body-text: #4d4d4f;
 $font-family-sans-serif: 'Open Sans', sans-serif;
 $font-family-serif: 'Georgia', serif;
+
+//Breakpoints
+$screen-tablet-min: 768px;
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,600,300italic,600italic);
 
 @import "../../bower_components/normalize-scss/_normalize.scss";
 
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 body {
   //Type defaults
-  color: #4d4d4f;
+  color: $color-body-text;
   font-family: $font-family-sans-serif;
   font-weight: 300;
 

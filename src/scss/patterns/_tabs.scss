@@ -2,6 +2,85 @@
   display: none;
 }
 
-.tab-handle.active {
-  font-weight: bold;
+
+.tabs-handles {
+  font-size: 0;
+}
+
+.tabs-handles .tab-handle {
+  font-family: $font-family-serif;
+  font-size: 18px;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 9999px;
+
+  width: 4em;
+  height: 4em;
+
+  padding: 0.555em 0.18em 0;
+
+  background-color: #fff;
+
+  border-width: 4px;
+  border-style: solid;
+  border-color: $color-dirt;
+
+  box-shadow: 0 0 0 2px $color-plastic;
+
+  color: $color-body-text;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  & img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  & span.short,
+  & span.full {
+    text-align: center;
+    line-height: 1em;
+    overflow: visible;
+    display: block;
+
+    opacity: 0.5;
+  }
+
+  &.active span.short,
+  &.active span.full {
+    opacity: 1;
+  }
+
+  & span.short {
+    font-size: 1.4em;
+    font-weight: bold;
+  }
+
+  & span.full {
+    font-size: 11px;
+    max-width: 100%;
+    overflow: hidden;
+    line-height: 1.3em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+@media screen and (min-width: $screen-tablet-min) {
+  .tabs-handles .tab-handle {
+    //Layout
+    display: block;
+
+    //Size
+    font-size: 24px;
+    padding-top: 0.8em;
+
+    & span.full {
+      overflow: visible;
+      white-space: normal;
+    }
+  }
 }
