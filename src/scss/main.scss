@@ -11,6 +11,8 @@ $screen-tablet-min: 768px;
 
 @import "../../bower_components/normalize-scss/_normalize.scss";
 
+@import "../../bower_components/font-awesome/scss/font-awesome";
+
 @mixin strip-edge-margins {
   & :first-child {
     margin-top: 0;
@@ -27,6 +29,31 @@ $screen-tablet-min: 768px;
 
 .strip-edge-margins {
   @extend %strip-edge-margins;
+}
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
+
+.clearfix {
+  @include clearfix;
 }
 
 *,
@@ -94,8 +121,11 @@ h6 {
   background-color: #fff;
   font-size: 16px;
 }
-
+@import "patterns/social-icons";
 @import "patterns/tabs";
 
 @import "patterns/homepage";
 @import "patterns/navigation";
+
+
+@import "patterns/page-contact";

@@ -1,0 +1,50 @@
+.social-icon {
+
+  box-sizing: border-box;
+
+  @extend .fa;
+  font-size: 1em;
+
+  &:before {
+    font-family: 'fontawesome';
+    content: "?"; //Default for unrecognized social sites
+  }
+
+  &.www:before {
+    content: $fa-var-laptop;
+    font-size: 0.9em; //This icon is too wide at 100%
+  }
+
+  &.blog:before {
+    content: $fa-var-pencil;
+    font-size: 0.9em; //This icon is too wide at 100%
+  }
+
+  &.twitter:before {
+    content: $fa-var-twitter;
+  }
+
+  &.linkedin:before {
+    content: $fa-var-linkedin;
+  }
+
+  &.facebook:before {
+    content: $fa-var-facebook;
+  }
+
+  &.pinterest:before {
+    content: $fa-var-pinterest-p;
+  }
+
+  &.instagram:before {
+    content: $fa-var-instagram;
+  }
+}
+
+a.social-icon {
+  &,
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}

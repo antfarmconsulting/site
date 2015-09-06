@@ -2,7 +2,8 @@
   "name": "antfarm-consulting-site",
   "private": true,
   "dependencies": {
-    "normalize-scss": "~3.0.3",
-    "jquery": "1"
+    "font-awesome": "~4.4.0",
+    "jquery": "1",
+    "normalize-scss": "~3.0.3"
   }
 }

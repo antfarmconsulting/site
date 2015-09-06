@@ -1,0 +1,28 @@
+.page-contact .page-content {
+  background-color: #323332;
+  border: 0;
+  border-radius: 10px;
+
+  &,
+  & a {
+    color: #fff;
+  }
+}
+
+.page-contact .social-icons .social-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  text-align: center;
+  background-color: #fff;
+  color: #323332;
+
+  border-radius: 3px;
+
+  &:hover,
+  &:focus {
+    background-color: $color-plastic;
+    color: #fff;
+  }
+}
