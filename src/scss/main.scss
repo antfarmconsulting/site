@@ -11,6 +11,23 @@ $screen-tablet-min: 768px;
 
 @import "../../bower_components/normalize-scss/_normalize.scss";
 
+@mixin strip-edge-margins {
+  & :first-child {
+    margin-top: 0;
+  }
+
+  & :last-child {
+    margin-bottom: 0;
+  }
+}
+
+%strip-edge-margins {
+  @include strip-edge-margins();
+}
+
+.strip-edge-margins {
+  @extend %strip-edge-margins;
+}
 
 *,
 *:before,
@@ -69,6 +86,7 @@ h6 {
 .page-title {
   color: $color-dirt;
   font-size: 45px;
+  font-weight: 400;
 }
 
 .page-content {

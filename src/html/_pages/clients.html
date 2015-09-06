@@ -2,10 +2,15 @@
   <h1 class="page-title">Clients</h1>
 
   <div class="page-content">
-    <ul>
-      {% for client in clients %}
-      <li class="client client-{{client.slug}}">{{client.name}}</li>
-      {% endfor %}
-    </ul>
+    <div class="tab-content">
+      <h2 class="tab-title">Headline</h2>
+      <div class="scrollblock">
+        <ul>
+          {% for client in clients %}
+          <li class="client client-{{client.slug}}">{{client.name}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
   </div>
 </div>

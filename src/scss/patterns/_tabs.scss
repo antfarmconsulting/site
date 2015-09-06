@@ -1,7 +1,6 @@
-.tab-content.tab-hide {
-  display: none;
-}
-
+/////////////////////
+/// TABS HANDLES
+/////////////////////
 
 .tabs-handles {
   font-size: 0;
@@ -94,4 +93,48 @@
       white-space: normal;
     }
   }
+}
+
+///////////////////////////////
+// TABS CONTENTS
+///////////////////////////////
+.tab-content.tab-hide {
+  display: none;
+}
+
+.tab-content {
+  max-height: 40vh;
+  position: relative;
+}
+
+
+$title-height: 45px;
+.tab-content h2.tab-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $color-dirt;
+  background-image: linear-gradient(to right, rgba(#fff, 0) 0%,rgba(#fff,0.9) 100%);
+  font-weight: normal;
+  color: #fff;
+  margin: 0;
+  height: $title-height;
+  line-height: $title-height;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  z-index: 2;
+  padding: 0 15px;
+}
+
+.tab-content .scrollblock {
+  z-index: 1;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 40vh;
+  padding: 15px;
+  padding-top: $title-height + 15px;
+
+  @include strip-edge-margins;
 }
