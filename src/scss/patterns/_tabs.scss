@@ -17,27 +17,35 @@
   width: 4em;
   height: 4em;
 
-  padding: 0.555em 0.18em 0;
 
-  background-color: #fff;
+  background-color: $color-dirt;
+  background-image: linear-gradient(to right, rgba(#fff, 0.9) 0%,rgba(#fff,0) 100%);
 
-  border-width: 4px;
-  border-style: solid;
-  border-color: $color-dirt;
-
-  box-shadow: 0 0 0 2px $color-plastic;
+  border: $color-plastic solid 2px;
 
   color: $color-body-text;
+  padding: 4px;
+
+  & .tab-handle-inner,
+  & img {
+    display: block;
+    background-color: #fff;
+    width: calc(4em - 12px);
+    height: calc(4em - 12px);
+    border-radius: 9999px;
+    padding: 0.555em 0.18em 0;
+
+  }
+
+  & img {
+    padding: 0;
+  }
 
   &:hover,
   &:focus {
     text-decoration: none;
   }
 
-  & img {
-    max-width: 100%;
-    height: auto;
-  }
 
   & span.short,
   & span.full {
@@ -76,7 +84,10 @@
 
     //Size
     font-size: 24px;
-    padding-top: 0.8em;
+
+    .tab-handle-inner {
+      padding-top: 0.8em;
+    }
 
     & span.full {
       overflow: visible;
