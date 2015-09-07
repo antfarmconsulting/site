@@ -9,7 +9,9 @@ page.numTabs
 
 #}
 <div id="{{page.slug}}" class="page page-tabs page-{{page.slug}}">
-  <h1 class="page-title">{{page.title}}</h1>
+  {% set pass_data = {"title": page.title} %}
+  {% include '../_partials/page-title.html' with pass_data %}
+
   <div class="tabs-handles">
     {%block tab-1-handle %}{# BLANK #}{% endblock %}
     {%block tab-2-handle %}{# BLANK #}{% endblock %}

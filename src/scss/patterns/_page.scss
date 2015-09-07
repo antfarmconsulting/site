@@ -14,9 +14,61 @@
   @media screen and (min-width: $screen-tablet-min) {
     font-size: 45px;
   }
-
 }
 
+.page-title-area {
+  @include clearfix;
+  margin-bottom: 20px;
+}
+
+.page-title-area .antbulb,
+.page-title-area .page-title {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/// Antbulb
+.page-title-area {
+  .antbulb {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    overflow: visible;
+  }
+
+  .antbulb .ant,
+  .antbulb .bulb {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% auto;
+  }
+
+
+  .antbulb .ant {
+    width: 28px;
+    height: 36px;
+    top: 4px;
+    left: 11px;
+    background-image: url(../img/ant.svg);
+  }
+
+  .antbulb .bulb {
+    bottom: 0;
+    right: 0;
+    width: 64px;
+    height: 146px;
+    background-image: url(../img/bulb.svg);
+  }
+}
+
+.page-title-area .page-title {
+  margin: 0;
+}
+
+/////////////////////////
+// PAGE CONTENT
+/////////////////////////
 .page-content {
   border-color: rgba(#000, 0.2);
   border-style: solid;
