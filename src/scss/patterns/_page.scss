@@ -1,7 +1,26 @@
 .page {
+  padding-left: 20px;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+
+.page-title {
+  color: $color-dirt;
+  font-size: 25px;
+  font-weight: 400;
+  margin: 0 0 18px;
+
+  @media screen and (min-width: $screen-tablet-min) {
+    font-size: 45px;
+  }
 
 }
 
-.page.page-tabs {
-  
+.page-content {
+  border-color: rgba(#000, 0.2);
+  border-style: solid;
+  border-width: 10px 0 10px 10px;
+  background-color: #fff;
+  font-size: 16px;
 }
