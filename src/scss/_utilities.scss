@@ -1,0 +1,44 @@
+@mixin strip-edge-margins {
+  & :first-child {
+    margin-top: 0;
+  }
+
+  & :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.strip-edge-margins {
+  @include strip-edge-margins();
+}
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
+
+.clearfix {
+  @include clearfix;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
