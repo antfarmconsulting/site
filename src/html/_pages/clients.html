@@ -5,9 +5,11 @@
     <div class="tab-content">
       <h2 class="tab-title">Headline</h2>
       <div class="scrollblock">
-        <ul>
+        <ul class="clients">
           {% for client in clients %}
-          <li class="client client-{{client.slug}}">{{client.name}}</li>
+          <li class="client client-{{client.slug}}">
+            <img src="img/client/{{client.slug}}.png" alt="{{client.name}}"/>
+          </li>
           {% endfor %}
         </ul>
       </div>

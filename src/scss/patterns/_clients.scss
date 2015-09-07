@@ -1,0 +1,31 @@
+ul.clients,
+ul.clients li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul.clients {
+
+}
+
+ul.clients li {
+  border: $color-plastic solid 1px;
+  float: left;
+  width: 50%;
+  height: 120px;
+  padding: 25px;
+  object-fit: contain; //todo: needs work
+  overflow: hidden;
+
+  @media screen and (min-width: $screen-tablet-min) {
+    width: 25%;
+    height: 100px;
+  }
+}
+
+
+ul.clients li  img {
+  width: 100%;
+  filter: grayscale(100%);
+}
