@@ -4,6 +4,23 @@
 
 .tabs-handles {
   font-size: 0;
+  position: relative;
+}
+
+@media screen and (min-width: $screen-tablet-min) {
+  .tabs-handles:after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    z-index: 1;
+    background-image: url(../img/wire-vertical.svg);
+    background-position: 100% 100%;
+    background-size: 100% 100%;
+    height: 350px;
+    width: 131px;
+    opacity: $wire-opacity;
+  }
 }
 
 .tabs-handles .tab-handle {
@@ -12,6 +29,8 @@
   display: inline-block;
   overflow: hidden;
   border-radius: 9999px;
+  position: relative;
+  z-index: 2;
 
   width: 4em;
   height: 4em;
@@ -80,6 +99,11 @@
   .tabs-handles .tab-handle {
     //Layout
     display: block;
+    margin: 15px auto 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
 
     //Size
     font-size: 24px;
@@ -103,7 +127,7 @@
 }
 
 .tab-content {
-  max-height: 40vh;
+  height: 40vh;
   position: relative;
 }
 
@@ -132,9 +156,47 @@ $title-height: 45px;
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
-  max-height: 40vh;
+  max-height: 100%;
   padding: 15px;
   padding-top: $title-height + 15px;
 
   @include strip-edge-margins;
+}
+
+///////////////////////
+// TABLET LAYOUT
+///////////////////////
+
+@media screen and (min-width: $screen-tablet-min) {
+  .page-tabs {
+    @include clearfix;
+  }
+
+  //Todo: not specific to tabs
+  .page-title-area {
+    margin-left: 186px;
+  }
+
+  .tab-content {
+    height: 400px;
+  }
+
+  .page-tabs .tabs-handles,
+  .page-tabs .tabs-contents {
+    display: inline-block;
+    vertical-align: bottom;
+  }
+
+
+  .page-tabs .tabs-handles {
+    width: 160px;
+    margin-right: 10px; //allow for box shadow
+    text-align: center;
+  }
+
+  .page-tabs .tabs-contents {
+    width: calc(100% - 170px);
+  }
+
+
 }

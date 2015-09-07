@@ -4,6 +4,8 @@ $color-body-text: #4d4d4f;
 $font-family-sans-serif: 'Open Sans', sans-serif;
 $font-family-serif: 'Georgia', serif;
 
+$wire-opacity: 0.4;
+
 //Breakpoints
 $screen-tablet-min: 768px;
 
@@ -27,3 +29,29 @@ $screen-tablet-min: 768px;
 
 
 @import "patterns/page-contact";
+
+
+.pipe {
+  position: absolute;
+  top: 0;
+  left: -8px;
+  width: 32px;
+  height: 4000px;
+  background-color: $color-plastic;
+  z-index: 0;
+  background-image: linear-gradient(to right, rgba(#fff, 0) 0%,rgba(#fff,0.5) 100%);
+
+  @media screen and (min-width: $screen-tablet-min) {
+    left: 165px;
+  }
+
+
+}
+
+
+.page {
+  z-index: 1;
+  position: relative;
+}
+
+
