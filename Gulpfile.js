@@ -9,7 +9,7 @@ var gulp = require('gulp'),
 gulp.task('html', [], function () {
   var clientsData = YAML.load('./src/data/clients.yaml');
 
-  console.log(clientsData);
+  // console.log(clientsData);
   return gulp.src('src/html/*.html')
     .pipe(swig({
       data: {
@@ -37,6 +37,13 @@ gulp.task('sass', [], function () {
     .pipe(gulp.dest('build/css'));
 });
 
+gulp.task('unconcatenable-js', function () {
+  return gulp.src([
+    'src/js/modernizr-custom.js'
+  ])
+    .pipe(gulp.dest('build/js'));
+})
+
 gulp.task('js', function () {
   return gulp.src([
     'bower_components/jquery/dist/jquery.min.js',
@@ -53,6 +60,7 @@ gulp.task('watch', function () {
 gulp.task('build', [
   'html',
   'sass',
+  'unconcatenable-js',
   'js',
   'copyflat'
 ]);
