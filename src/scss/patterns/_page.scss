@@ -77,7 +77,13 @@
 // PAGE CONTENT
 /////////////////////////
 .page-content {
-  box-shadow: 0 0 0 10px rgba(#000, $wire-opacity);
+  padding: 16px;
+  background-image: linear-gradient(to right, #000 0%, #fff 100%);
   background-color: #fff;
   font-size: 16px;
+  border-radius: 10px 10px 0 0;
+}
+
+.page-content .tab-content {
+  background-color: #fff;
 }
