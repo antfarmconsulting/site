@@ -76,12 +76,17 @@
 /////////////////////////
 // PAGE CONTENT
 /////////////////////////
-.page-content {
+.page .page-content {
   padding: 16px;
-  background-image: linear-gradient(to right, #000 0%, #fff 100%);
   background-color: #fff;
   font-size: 16px;
-  border-radius: 10px 10px 0 0;
+  background-image: linear-gradient(to right, #000 0%, #fff 100%);
+  border-radius: 10px 0 0 0;
+}
+
+.page:nth-child(2n+1) .page-content {
+  border-radius: 0 10px 0 0;
+  background-image: linear-gradient(to right, #fff 0%, #000 100%);
 }
 
 .page-content .tab-content {
