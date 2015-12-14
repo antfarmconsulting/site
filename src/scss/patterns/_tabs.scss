@@ -134,16 +134,21 @@
 
 $title-height: 45px;
 .tab-content .tab-title {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   background-color: $color-dirt;
   background-image: linear-gradient(to right, rgba(#fff, 0) 0%,rgba(#fff,0.9) 100%);
   height: $title-height;
   line-height: $title-height;
   z-index: 2;
   padding: 0 15px;
-  width: 100%;
+
+  html.no-csscalc & {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
 }
 
 .tab-content .tab-title h2 {
@@ -161,11 +166,14 @@ $title-height: 45px;
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
-  max-height: 100%;
+  max-height: calc(100% - #{$title-height});
   padding: 15px;
-  padding-top: $title-height + 15px;
 
-  @include strip-edge-margins;
+  html.no-csscalc & {
+    max-height: 100%;
+    padding-top: $title-height + 15px;
+  }
+
 }
 
 ///////////////////////
