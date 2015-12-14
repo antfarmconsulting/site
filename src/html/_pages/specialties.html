@@ -27,7 +27,8 @@
 {% endblock %}
 {% block tab-1-content %}
 <div class="tab-content" id="videography">
-  <h2 class="tab-title">Videography</h2>
+  {% set pass_data = {"title": 'Videography'} %}
+  {% include '../_partials/tab-title.html' with pass_data only %}
   <div class="scrollblock">
     <p><strong>Uncover the customer behind the data.</strong></p>
     <p>Never have marketers had so much data. Test. Collect. Analyze. Repeat. And while all that data can help us make more reliable decisions, we sometimes lose our customer in the numbers.</p>
@@ -55,7 +56,8 @@ ALSO: Three Videos Links…TBD
 {% endblock %}
 {% block tab-2-content %}
 <div class="tab-content" id="business-to-business">
-  <h2 class="tab-title">Business to Business</h2>
+  {% set pass_data = {"title": 'Business to Business'} %}
+  {% include '../_partials/tab-title.html' with pass_data only %}
   <div class="scrollblock">
     <p><strong>Get inside the motivations and relationships behind the decisions.</strong></p>
     <p>What&rsquo;s the trick to b2b communications? Gloss over the price, romance the features, call it a solution and call it a day. Right? Well, no.</p>
@@ -78,7 +80,8 @@ ALSO: Three Videos Links…TBD
 {% endblock %}
 {% block tab-3-content %}
 <div class="tab-content" id="communication-strategy">
-  <h2 class="tab-title">Communication Strategy</h2>
+  {% set pass_data = {"title": 'Communication Strategy'} %}
+  {% include '../_partials/tab-title.html' with pass_data only %}
   <div class="scrollblock">
     <p><strong>Focus for tactics, inspiration for creativity.</strong></p>
     <p>There&rsquo;s one customer that&rsquo;s usually taken for granted in every marketing campaign: your team. Each person on your team has their own assumptions, inclinations and motivations. And sometimes they&rsquo;re your toughest customer.</p>
@@ -99,7 +102,8 @@ ALSO: Three Videos Links…TBD
 {% endblock %}
 {% block tab-4-content %}
 <div class="tab-content" id="technology">
-  <h2 class="tab-title">Technology</h2>
+  {% set pass_data = {"title": 'Technology'} %}
+  {% include '../_partials/tab-title.html' with pass_data only %}
   <div class="scrollblock">
     <p>NEED: COPY FOR TECHNOLOGY</p>
   </div>

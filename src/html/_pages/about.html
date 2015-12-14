@@ -20,7 +20,8 @@
 {% endblock %}
 {% block tab-1-content %}
 <div class="tab-content">
-  <h2 class="tab-title">About</h2>
+  {% set pass_data = {"title": 'About'} %}
+  {% include '../_partials/tab-title.html' with pass_data only %}
   <div class="scrollblock">
     <p>Antfarm Consulting is the corporate front of Phil Klafta. I have over 20 years of experience helping agencies and companies develop innovative strategies built on customer and competitor insights using a disciplined and collaborative approach.</p>
     <p><strong>Strategic:</strong> I focus my clients on the targets, insights, and ideas that will help them achieve their objectives.</p>

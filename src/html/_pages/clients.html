@@ -3,7 +3,8 @@
   {% include '../_partials/page-title.html' with pass_data %}
   <div class="page-content">
     <div class="tab-content">
-      <h2 class="tab-title">Headline</h2>
+      {% set pass_data = {"title": 'Headline'} %}
+  {% include '../_partials/tab-title.html' with pass_data only %}
       <div class="scrollblock">
         <ul class="clients">
           {% for client in clients %}

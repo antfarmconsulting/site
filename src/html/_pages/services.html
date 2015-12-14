@@ -26,7 +26,8 @@
 {% endblock %}
 {% block tab-1-content %}
 <div class="tab-content" id="insights">
-  <h2 class="tab-title">Insights</h2>
+  {% set pass_data = {"title": 'Insights'} %}
+  {% include '../_partials/tab-title.html' with pass_data only %}
   <div class="scrollblock">
     <p><strong>Customer Video, Personae, Interviews, Cultural Analysis</strong></p>
     <p>Video and personae are powerful tools for communicating information and insights, helping decision makers better understand the customer they hope to influence. Antfarm has created Customer Videos and Personae of corporate IT leaders, jeans shoppers, football fans, new parents, recent hospital patients, and many others.</p>
@@ -47,7 +48,8 @@
 {% endblock %}
 {% block tab-2-content %}
 <div class="tab-content" id="research">
-  <h2 class="tab-title">Research</h2>
+  {% set pass_data = {"title": 'Research'} %}
+  {% include '../_partials/tab-title.html' with pass_data only %}
   <div class="scrollblock">
     <p><strong>Concept Testing, Competitive Analysis, Evaluation, Retail Experience</strong></p>
     <p>Have an idea for a product, package, or communication? Antfarm helps its clients understand customer reactions to new ideas and helps make them stronger. We've conducted Concept Testing for a new restaurant, packaging for construction contractors, ideas for frozen meals and household cleaners, websites, direct mail, and many, many ads.</p>
@@ -67,7 +69,8 @@
 {% endblock %}
 {% block tab-3-content %}
 <div class="tab-content" id="strategy">
-  <h2 class="tab-title">Strategy</h2>
+  {% set pass_data = {"title": 'Strategy'} %}
+  {% include '../_partials/tab-title.html' with pass_data only %}
   <div class="scrollblock">
     <p><strong>Brand, Positioning, Communications, Content</strong></p>
     <p>Information and insights are the fuel of new ideas, but those ideas must add up to answer the question of marketing strategy: What do we do with our (Brand, Positioning, Communications, Content) to be successful?</p>

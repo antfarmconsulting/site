@@ -139,16 +139,21 @@ $title-height: 45px;
   left: 0;
   background-color: $color-dirt;
   background-image: linear-gradient(to right, rgba(#fff, 0) 0%,rgba(#fff,0.9) 100%);
-  font-weight: normal;
-  color: #fff;
-  margin: 0;
   height: $title-height;
   line-height: $title-height;
-  overflow: hidden;
-  white-space: nowrap;
-  width: 100%;
   z-index: 2;
   padding: 0 15px;
+  width: 100%;
+}
+
+.tab-content .tab-title h2 {
+  margin: 0;
+  font-weight: normal;
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  padding-right: 100px; //Leave room for arrows
 }
 
 .tab-content .scrollblock {
