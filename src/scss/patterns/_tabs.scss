@@ -173,6 +173,8 @@ $title-height: 45px;
   max-height: calc(100% - #{$title-height});
   padding: 15px;
 
+  @include strip-edge-margins();
+
   html.no-csscalc & {
     max-height: 100%;
     padding-top: $title-height + 15px;
@@ -180,6 +182,38 @@ $title-height: 45px;
 
 }
 
+//////////////////////////
+/// CONTENT STYLES
+//////////////////////////
+.scrollblock {
+  font-size: 18px;
+}
+
+.scrollblock h3 {
+  font-size: 20px;
+  color: $color-dirt;
+  padding-bottom: 16px;
+  border-bottom: $color-dirt dotted 2px;
+  font-family: $font-family-sans-serif;
+  font-weight: 400;
+}
+
+.scrollblock hr {
+  border: 0;
+  border-bottom: $color-dirt dotted 2px;
+}
+
+.scrollblock b,
+.scrollblock strong {
+  font-weight: 400;
+  color: $color-plastic;
+}
+
+.scrollblock i,
+.scrollblock em {
+  font-style: normal;
+  color: $color-dirt;
+}
 ///////////////////////
 // TABLET LAYOUT
 ///////////////////////
