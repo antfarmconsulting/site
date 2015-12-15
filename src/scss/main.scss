@@ -1,10 +1,13 @@
-  $color-dirt: #c88028;
+$color-dirt: #c88028;
 $color-plastic: #33935e;
 $color-body-text: #4d4d4f;
 $font-family-sans-serif: 'Open Sans', sans-serif;
 $font-family-serif: 'Georgia', serif;
 
-$wire-opacity: 0.4;
+$pipe-distance-from-left: 40%;
+$pipe-width: 32px;
+
+$wire-opacity: 0.7;
 
 //Breakpoints
 $screen-tablet-min: 768px;
@@ -36,8 +39,8 @@ $screen-tablet-min: 768px;
 .pipe {
   position: absolute;
   top: 0;
-  left: 46%;
-  width: 32px;
+  left: $pipe-distance-from-left;
+  width: $pipe-width;
   height: 4000px;
   background-color: $color-plastic;
   z-index: 0;

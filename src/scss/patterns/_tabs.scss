@@ -6,25 +6,33 @@
   font-size: 0;
   position: relative;
   float: left;
-  width: 50%;
+  width: $pipe-distance-from-left;
   text-align: right;
+  margin-bottom: 4px;
 }
 
-@media screen and (min-width: $screen-tablet-min) {
-  //Wire
-  .tabs-handles:after {
-    content: '';
-    position: absolute;
-    top: 40px;
-    right: 0;
-    z-index: 1;
-    background-image: url(../img/wire-vertical.svg);
-    background-position: 100% 100%;
-    background-size: 100% 100%;
+//Wire
+.tabs-handles:after {
+  content: '';
+  position: absolute;
+  top: 40px;
+  right: 0;
+  z-index: 1;
+  background-image: url(../img/wire-vertical.svg);
+  background-position: 100% 100%;
+  background-size: 100% 100%;
+  opacity: $wire-opacity;
+
+  height: 285px;
+  width: 95px;
+
+
+  @media screen and (min-width: $screen-tablet-min) {
     height: 350px;
-    width: 131px;
-    opacity: $wire-opacity;
+    width: 117px;
   }
+
+
 }
 
 .tabs-handles .tab-handle {
@@ -47,7 +55,8 @@
 
   color: $color-body-text;
   padding: 4px;
-  margin: 1px 0 0;
+  margin-top: 1px;
+  margin-right: 10px;
 
   & .tab-handle-inner,
   & img {
@@ -233,15 +242,6 @@ $title-height: 45px;
   .tab-content {
     height: 400px;
   }
-
-  .page-tabs .tabs-handles {
-    padding-right: 10px; //allow for box shadow
-  }
-
-  .page-tabs .tabs-contents {
-    width: calc(100% - 170px);
-  }
-
 
 }
 
