@@ -253,8 +253,8 @@ $title-height: 45px;
 }
 
 .scroll-nav {
-  $scroll-nav-size: 32px;
-  $scroll-nav-border-width: 1px;
+  $scroll-nav-size: 24px;
+  $scroll-nav-border-width: 0px;
   box-sizing: border-box;
 
   @extend .fa;
@@ -271,6 +271,7 @@ $title-height: 45px;
     width: $scroll-nav-size;
     line-height: $scroll-nav-size - (2 * $scroll-nav-border-width) - 4px;
     text-align: center;
+    font-size: 14px;
   }
 
   &:before {
