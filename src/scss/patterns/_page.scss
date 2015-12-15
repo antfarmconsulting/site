@@ -23,9 +23,8 @@
 }
 
 .page-title-area {
-  @include clearfix;
-  margin-bottom: 20px;
-  margin-left: 15px;
+  float: right;
+  width: 50%;
 }
 
 .page-title-area .antbulb,

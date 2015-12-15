@@ -36,16 +36,11 @@ $screen-tablet-min: 768px;
 .pipe {
   position: absolute;
   top: 0;
-  left: -8px;
+  left: 46%;
   width: 32px;
   height: 4000px;
   background-color: $color-plastic;
   z-index: 0;
-  background-image: linear-gradient(to right, rgba(#fff, 0) 0%,rgba(#fff,0.5) 100%);
-
-  @media screen and (min-width: $screen-tablet-min) {
-    left: 165px;
-  }
 
 
 }

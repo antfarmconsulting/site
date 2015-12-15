@@ -5,13 +5,17 @@
 .tabs-handles {
   font-size: 0;
   position: relative;
+  float: left;
+  width: 50%;
+  text-align: right;
 }
 
 @media screen and (min-width: $screen-tablet-min) {
+  //Wire
   .tabs-handles:after {
     content: '';
     position: absolute;
-    bottom: 20px;
+    top: 40px;
     right: 0;
     z-index: 1;
     background-image: url(../img/wire-vertical.svg);
@@ -43,6 +47,7 @@
 
   color: $color-body-text;
   padding: 4px;
+  margin: 1px 0 0;
 
   & .tab-handle-inner,
   & img {
@@ -95,11 +100,13 @@
   }
 }
 
+.tabs-handles .tab-handle-linebreak {
+  display: block;
+}
+
 @media screen and (min-width: $screen-tablet-min) {
   .tabs-handles .tab-handle {
-    //Layout
-    display: block;
-    margin: 1px auto 0;
+
 
     &:first-child {
       margin-top: 0;
@@ -223,26 +230,12 @@ $title-height: 45px;
     @include clearfix;
   }
 
-  //Todo: not specific to tabs
-  .page-title-area {
-    margin-left: 186px;
-  }
-
   .tab-content {
     height: 400px;
   }
 
-  .page-tabs .tabs-handles,
-  .page-tabs .tabs-contents {
-    display: inline-block;
-    vertical-align: bottom;
-  }
-
-
   .page-tabs .tabs-handles {
-    width: 160px;
-    margin-right: 10px; //allow for box shadow
-    text-align: center;
+    padding-right: 10px; //allow for box shadow
   }
 
   .page-tabs .tabs-contents {
