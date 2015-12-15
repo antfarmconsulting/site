@@ -1,22 +1,24 @@
 <div id="clients" class="page page-fullwidth page-clients">
   {% set pass_data = {"title": "Clients"} %}
   {% include '../_partials/page-title.html' with pass_data %}
-  <div class="page-content">
-    <div class="tab-content">
-      {% set pass_data = {"title": 'The Folks I’ve Served'} %}
-      {% include '../_partials/tab-title.html' with pass_data only %}
-      <div class="scrollblock">
-        <ul class="clients">
-          {% for client in clients %}
-          <li class="client client-{{client.slug}}">
-            <div class="client-inner-1">
-              <div class="client-inner-2"
-                ><img src="img/client/{{client.slug}}.png" alt="{{client.name}}"
-              /></div>
-            </div>
-          </li>
-          {% endfor %}
-        </ul>
+  <div class="page-content-container">
+    <div class="page-content">
+      <div class="tab-content">
+        {% set pass_data = {"title": 'The Folks I’ve Served'} %}
+        {% include '../_partials/tab-title.html' with pass_data only %}
+        <div class="scrollblock">
+          <ul class="clients">
+            {% for client in clients %}
+            <li class="client client-{{client.slug}}">
+              <div class="client-inner-1">
+                <div class="client-inner-2"
+                  ><img src="img/client/{{client.slug}}.png" alt="{{client.name}}"
+                /></div>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
     </div>
   </div>
