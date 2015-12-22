@@ -186,7 +186,7 @@ $title-height: 45px;
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
-  max-height: calc(100% - #{$title-height});
+  height: calc(100% - #{$title-height});
   padding: 15px;
 
   @include strip-edge-margins();
