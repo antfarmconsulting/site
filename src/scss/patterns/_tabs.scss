@@ -11,6 +11,14 @@
   margin-bottom: 4px;
 }
 
+$wire-aspect-ratio: (285/95);
+
+$wire-width-small: 95px;
+$wire-height-small: $wire-width-small * $wire-aspect-ratio;
+
+$wire-width-large: 153px;
+$wire-height-large: $wire-width-large * $wire-aspect-ratio;
+
 //Wire
 .tabs-handles:after {
   content: '';
@@ -23,13 +31,14 @@
   background-size: 100% 100%;
   opacity: $wire-opacity;
 
-  height: 285px;
-  width: 95px;
+  width: $wire-width-small;
+  height: $wire-height-small;
+
 
 
   @media screen and (min-width: $screen-tablet-min) {
-    height: 350px;
-    width: 117px;
+    width: $wire-width-large;
+    height: $wire-height-large;
   }
 
 
@@ -49,7 +58,7 @@
 
 
   background-color: $color-dirt;
-  background-image: linear-gradient(to right, rgba(#fff, 0.9) 0%,rgba(#fff,0) 100%);
+  background-image: linear-gradient(to left, rgba(#fff, 0.9) 0%,rgba(#fff,0) 100%);
 
   border: $color-plastic solid 2px;
 
@@ -159,16 +168,24 @@
   position: relative;
 }
 
+$title-height-small: 45px;
+$title-height-large: 58px;
+$title-size-small: 20px;
+$title-size-large: 32px;
 
-$title-height: 45px;
 .tab-content .tab-title {
   position: relative;
   background-color: $color-dirt;
   background-image: linear-gradient(to right, rgba(#fff, 0) 0%,rgba(#fff,0.9) 100%);
-  height: $title-height;
-  line-height: $title-height;
+  height: $title-height-small;
+  line-height: $title-height-small;
   z-index: 2;
   padding: 0 15px;
+
+  @media screen and (min-width: $screen-tablet-min) {
+    height: $title-height-large;
+    line-height: $title-height-large;
+  }
 
   html.no-csscalc & {
     position: absolute;
@@ -182,11 +199,16 @@ $title-height: 45px;
 .tab-content .tab-title h2 {
   margin: 0;
   font-weight: normal;
+  font-size: $title-size-small;
   color: #fff;
   overflow: hidden;
   white-space: nowrap;
   display: block;
   padding-right: 100px; //Leave room for arrows
+
+  @media screen and (min-width: $screen-tablet-min) {
+    font-size: $title-size-large;
+  }
 }
 
 .tab-content .scrollblock {
@@ -194,14 +216,23 @@ $title-height: 45px;
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
-  height: calc(100% - #{$title-height});
+  height: calc(100% - #{$title-height-small});
   padding: 15px;
+
+  @media screen and (min-width: $screen-tablet-min) {
+    height: calc(100% - #{$title-height-large});
+  }
 
   @include strip-edge-margins();
 
   html.no-csscalc & {
     max-height: 100%;
-    padding-top: $title-height + 15px;
+    padding-top: $title-height-small + 15px;
+
+    @media screen and (min-width: $screen-tablet-min) {
+      padding-top: $title-height-large + 15px;
+
+    }
   }
 
 }
@@ -211,15 +242,22 @@ $title-height: 45px;
 //////////////////////////
 .scrollblock {
   font-size: 18px;
+  @media screen and (min-width: $screen-tablet-min) {
+    font-size: 27px;
+  }
 }
 
 .scrollblock h3 {
   font-size: 20px;
   color: $color-dirt;
-  padding-bottom: 16px;
+  padding-bottom: 0.8em;
   border-bottom: $color-dirt dotted 2px;
   font-family: $font-family-sans-serif;
   font-weight: 400;
+
+  @media screen and (min-width: $screen-tablet-min) {
+    font-size: 28px;
+  }
 }
 
 .scrollblock hr {

@@ -1,13 +1,14 @@
 .page-home {
-  background-color: #292627; //average of image
-  background-image: url(../img/home-background.jpg);
+  background-color: #231F20; //average of image
   background-position: center center;
   background-size: cover;
   padding: 200px 0;
 }
 
 .page-home img {
-  max-width: 80%;
+  width: 58%;
+  min-width: 280px;
+  max-width: 600px;
   margin: 0 auto;
   display: block;
 }

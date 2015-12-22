@@ -12,7 +12,12 @@
   }
 
   & h2 {
+    padding-bottom: 20px;
     font-weight: 400;
+    background-image: url(../img/slashy-line.png);
+    background-position: 0 100%;
+    background-size: auto 11px;
+    background-repeat: repeat-x;
   }
 }
 

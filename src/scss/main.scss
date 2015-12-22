@@ -5,7 +5,7 @@ $font-family-sans-serif: 'Open Sans', sans-serif;
 $font-family-serif: 'Georgia', serif;
 
 $pipe-distance-from-left: 40%;
-$pipe-width: 32px;
+$pipe-width: 48px;
 
 $wire-opacity: 0.7;
 
@@ -41,7 +41,7 @@ $screen-tablet-min: 768px;
   top: 0;
   left: $pipe-distance-from-left;
   width: $pipe-width;
-  height: 4000px;
+  height: 10000px;
   background-color: $color-plastic;
   z-index: 0;
 
