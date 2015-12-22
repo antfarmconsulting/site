@@ -78,6 +78,14 @@
     text-decoration: none;
   }
 
+  &.tab-handle-phil img {
+    opacity: 0.75;
+  }
+
+  &.tab-handle-phil.active img {
+    opacity: 1;
+  }
+
 
   & span.short,
   & span.full {
