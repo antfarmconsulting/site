@@ -38,6 +38,10 @@
 /// Antbulb
 .page-title-area {
   font-size: 50px;
+  padding-top: 2em;
+  @media screen and (min-width: $screen-tablet-min) {
+    font-size: 70px;
+  }
 
   .antbulb {
     position: relative;
@@ -67,8 +71,8 @@
   .antbulb .bulb {
     bottom: 0;
     right: 0;
-    width: 64px;
-    height: 146px;
+    width: 1.28em; //64px on 50px;
+    height: 2.92em; //146px on 50px;
     background-image: url(../img/bulb.svg);
   }
 }

@@ -2,13 +2,48 @@
   background-color: #323332;
   background-image: none; //Remove gradient
   border: 0;
-  border-radius: 10px;
+  border-radius: 20px;
+
+  border: $color-dirt solid 5px;
 
   &,
   & a {
     color: #fff;
   }
+
+  & h2 {
+    font-weight: 400;
+  }
 }
+
+.page-contact .page-title-area {
+  font-size: 16px;
+  color: #fff;
+  font-family: $font-family-serif;
+  font-weight: bold;
+  background-color: $color-dirt;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.page-contact .page-content {
+  @extend .clearfix;
+}
+
+.page-contact .grid-sm-1-3 {
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media screen and (min-width: $screen-tablet-min) {
+    width: (100% / 3);
+  }
+
+}
+
 
 .page-contact .social-icons .social-icon {
   display: inline-block;
