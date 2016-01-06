@@ -1,12 +1,14 @@
 $nav-border-color: #fff;
 
 .navigation {
+
   & {  
     position: fixed;
     top: 20px;
     right: 20px;
 
     z-index: 300;
+    text-align: right;
   }
 
   .navigation-toggle {
@@ -19,6 +21,7 @@ $nav-border-color: #fff;
     width: 60px;
     line-height: 60px;
     font-size: 30px;
+    display: inline-block;
 
     background-image: url(../img/hamburger.svg);
     background-size: cover;
@@ -47,30 +50,72 @@ $nav-border-color: #fff;
   }
 
   ul.navigation-list {
+    display: block;
+    text-align: left;
     background: #333;
-    border: $nav-border-color solid 1px;
+    border: $nav-border-color solid 2px;
   }
 
   ul.navigation-list li + li {
-    border-top: $nav-border-color solid 1px;
+    border-top: $nav-border-color solid 2px;
   }
 
-  ul.navigation-list li span,
-  ul.navigation-list li a {
-    padding: 4px;
-    display: block;
-
-    & {
+  ul.navigation-list li {
+    & a {
       color: #fff;
     }
-  }
 
-  ul.navigation-list li a {
-    background-color: $color-plastic;
-  
-    &[rel="external"] {
+    & > span,
+    & > a {
+      padding: 8px 6px;
+      display: block;
+
+      & {
+        color: #fff;
+      }
+    }
+
+    &.logo-row > span,
+    &.logo-row > a {
+      background-color: $color-plastic;
+
+      &,
+      & h1 {
+        font-size: 30px;
+        font-family: $font-family-sans-serif;
+      }
+    }
+
+    &.page-row > span,
+    &.page-row > a {
+      font-size: 30px;
+      font-family: $font-family-serif;
+      font-weight: bold;
       background-color: $color-dirt;
     }
+
+    &.tabs-row > span,
+    &.tabs-row > a {
+      font-size: 14px;
+      font-family: $font-family-serif;
+      font-weight: bold;
+      background-color: rgba($color-dirt, 0.75);
+    }
+
+    &.phils-blogs-row > span,
+    &.phils-blogs-row > a {
+      font-size: 30px;
+      background-color: #414042;
+    }
+
+    &.blog-row > span,
+    &.blog-row > a {
+      font-size: 16px;
+      font-family: $font-family-serif;
+      text-transform: uppercase;
+      background-color: #636466;
+    }
   }
+
 }
 
