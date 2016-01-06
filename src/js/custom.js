@@ -9,6 +9,9 @@ $(document).ready(function () {
     social_tools: ''
   });
 
+  //Rel="external" links open new tab
+  $("a[rel*='external']").attr({'target': '_blank'});
+
   //Navigation toggling
   var $navigation = $('.navigation');
 
