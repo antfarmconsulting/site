@@ -23,8 +23,10 @@
   }
 }
 
+$marquee-border-width: 8px;
 .page-contact .page-title-area {
-  padding: 3px 0;
+  position: relative;
+  padding: ($marquee-border-width + 2px) 0 3px;
   font-size: 16px;
   color: #fff;
   font-family: $font-family-serif;
@@ -41,6 +43,18 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 16px;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: $marquee-border-width;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to left, #000 0%,#fff 100%);
+
+  }
 }
 
 .page-contact .page-content {
