@@ -8,23 +8,6 @@
 {% extends '../_layouts/page-tabs.html' %}
 
 {% block tab-1-handle %}
-<a class="tab-handle tab-handle-phil" href="#phil-klafta">
-  <img src="img/phil-klafta.jpg" alt="Phil Klafta" />
-</a>
-{% endblock %}
-{% block tab-1-content %}
-<div class="tab-content" id="phil-klafta">
-  {% set pass_data = {"title": 'Phil Klafta'} %}
-  {% include '../_partials/tab-title.html' with pass_data only %}
-  <div class="scrollblock">
-    <h3>Antfarm Consulting is the corporate front of Phil Klafta.</h3>
-    <p><strong>I have over 20 years of experience helping agencies and companies develop innovative strategies built on customer and competitor insights using a disciplined and collaborative approach.</strong></p>
-  </div>
-</div>
-{% endblock %}
-
-
-{% block tab-2-handle %}
 <a class="tab-handle tab-handle-short" href="#about">
   <span class="tab-handle-inner">
     <span class="short" aria-hidden="true">A</span>
@@ -32,11 +15,13 @@
   </span>
 </a>
 {% endblock %}
-{% block tab-2-content %}
+{% block tab-1-content %}
 <div class="tab-content" id="about">
   {% set pass_data = {"title": 'The Antfarm Way'} %}
   {% include '../_partials/tab-title.html' with pass_data only %}
   <div class="scrollblock">
+    <h3>Antfarm Consulting is the corporate front of Phil Klafta.</h3>
+    <p><strong>I have over 20 years of experience helping agencies and companies develop innovative strategies built on customer and competitor insights using a disciplined and collaborative approach.</strong></p>
     <p><strong>Strategic:</strong> I focus my clients on the targets, insights, and ideas that will help them achieve their objectives.</p>
     <p><strong>Disciplined:</strong> I develop strategies based upon insights into my client's capabilities, their customer's needs, competitive opportunities, and environmental trends.</p>
     <p><strong>Insightful:</strong> I separate the relevant information from the distractions and remix it into a fresh perspective.</p>
