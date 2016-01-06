@@ -22,7 +22,8 @@ $nav-border-thickness: 1px;
     height: 60px;
     width: 60px;
     line-height: 60px;
-    display: inline-block;
+    display: block;
+    float: right;
 
     background-image: url(../img/hamburger.svg);
     background-size: cover;
@@ -77,6 +78,7 @@ $nav-border-thickness: 1px;
 
     &.logo-row .close {
       float: right;
+      cursor: pointer;
       font-size: 2em;
       position: relative;
       font-weight: bold;
@@ -122,6 +124,27 @@ $nav-border-thickness: 1px;
       font-family: $font-family-serif;
       text-transform: uppercase;
       background-color: #636466;
+    }
+  }
+
+  //toggle styles
+  & {
+    & .navigation-toggle {
+      display: block;
+    }
+
+    & ul.navigation-list {
+      display: none;
+    }
+  }
+
+  &.open {
+    & .navigation-toggle {
+      display: none;
+    }
+
+    & ul.navigation-list {
+      display: block;
     }
   }
 

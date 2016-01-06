@@ -47,6 +47,7 @@ gulp.task('unconcatenable-js', function () {
 gulp.task('js', function () {
   return gulp.src([
     'bower_components/jquery/dist/jquery.min.js',
+    'bower_components/jQuery.Marquee/jquery.marquee.min.js',
     'src/js/custom.js'
   ])
     .pipe(concat('antfarm.js'))

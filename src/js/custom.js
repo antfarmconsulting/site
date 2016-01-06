@@ -4,6 +4,17 @@
 
 $(document).ready(function () {
 
+  //Navigation toggling
+  var $navigation = $('.navigation');
+
+  $navigation.each(function () {
+    $thisNav = $(this);
+
+    $thisNav.find('.navigation-toggle, .close').on('click', function () {
+      $thisNav.toggleClass('open');
+    });
+  });
+
   //Tabs are scoped to the page level
   $('.page').each(function () {
     var $page = $(this);
@@ -63,4 +74,11 @@ $(document).ready(function () {
 
   });
 
-})
+
+  //Contact page marquee
+  $('.page-contact .page-title-area').marquee({
+    duplicated: true,
+    duration: 10000,
+    gap: 0,
+  });
+});

@@ -293,6 +293,7 @@ $title-size-large: 32px;
 
 //Up/down scroll arrows
 .scroll-nav-container {
+  display: none;
   position: absolute;
   top: 0;
   right: 0;
