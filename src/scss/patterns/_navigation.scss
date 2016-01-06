@@ -1,8 +1,10 @@
 $nav-border-color: #fff;
-
+$nav-border-thickness: 1px;
 .navigation {
 
-  & {  
+  & {
+    font-size: 12px; //Base for all fonts
+
     position: fixed;
     top: 20px;
     right: 20px;
@@ -20,7 +22,6 @@ $nav-border-color: #fff;
     height: 60px;
     width: 60px;
     line-height: 60px;
-    font-size: 30px;
     display: inline-block;
 
     background-image: url(../img/hamburger.svg);
@@ -52,12 +53,11 @@ $nav-border-color: #fff;
   ul.navigation-list {
     display: block;
     text-align: left;
-    background: #333;
-    border: $nav-border-color solid 2px;
+    border: $nav-border-color solid $nav-border-thickness;
   }
 
   ul.navigation-list li + li {
-    border-top: $nav-border-color solid 2px;
+    border-top: $nav-border-color solid $nav-border-thickness;
   }
 
   ul.navigation-list li {
@@ -75,20 +75,28 @@ $nav-border-color: #fff;
       }
     }
 
+    &.logo-row .close {
+      float: right;
+      font-size: 2em;
+      position: relative;
+      font-weight: bold;
+      padding: 0 0.3em;
+    }
+
     &.logo-row > span,
     &.logo-row > a {
       background-color: $color-plastic;
+      font-size: 1em;
 
-      &,
       & h1 {
-        font-size: 30px;
+        font-size: 1.875em;
         font-family: $font-family-sans-serif;
       }
     }
 
     &.page-row > span,
     &.page-row > a {
-      font-size: 30px;
+      font-size: 1.875em;
       font-family: $font-family-serif;
       font-weight: bold;
       background-color: $color-dirt;
@@ -96,7 +104,7 @@ $nav-border-color: #fff;
 
     &.tabs-row > span,
     &.tabs-row > a {
-      font-size: 14px;
+      font-size: 0.875em;
       font-family: $font-family-serif;
       font-weight: bold;
       background-color: rgba($color-dirt, 0.75);
@@ -104,13 +112,13 @@ $nav-border-color: #fff;
 
     &.phils-blogs-row > span,
     &.phils-blogs-row > a {
-      font-size: 30px;
+      font-size: 1.875em;
       background-color: #414042;
     }
 
     &.blog-row > span,
     &.blog-row > a {
-      font-size: 16px;
+      font-size: 1em;
       font-family: $font-family-serif;
       text-transform: uppercase;
       background-color: #636466;
