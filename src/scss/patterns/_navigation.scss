@@ -1,41 +1,62 @@
 $nav-border-color: #fff;
 
 .navigation {
+  & {  
+    position: fixed;
+    top: 20px;
+    right: 20px;
 
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: #333;
+    z-index: 300;
+  }
 
-  z-index: 300;
-  ul,
-  ul li {
+  .navigation-toggle {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-apparance: none;
+    appearance: none;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    font-size: 30px;
+
+    background-image: url(../img/hamburger.svg);
+    background-size: cover;
+
+    border: none;
+    background-color: $color-plastic;
+    color: #fff;
+  }
+
+  ul.navigation-list,
+  ul.navigation-list li {
     margin: 0;
     padding: 0;
     list-style: none;
   }
 
-  & h1,
-  & h2,
-  & h3,
-  & h4,
-  & h5,
-  & h6 {
+  ul.navigation-list h1,
+  ul.navigation-list h2,
+  ul.navigation-list h3,
+  ul.navigation-list h4,
+  ul.navigation-list h5,
+  ul.navigation-list h6 {
     margin: 0;
     font-size: 1em;
     font-weight: normal;
   }
 
-  ul {
+  ul.navigation-list {
+    background: #333;
     border: $nav-border-color solid 1px;
   }
 
-  ul li + li {
+  ul.navigation-list li + li {
     border-top: $nav-border-color solid 1px;
   }
 
-  ul li span,
-  ul li a {
+  ul.navigation-list li span,
+  ul.navigation-list li a {
     padding: 4px;
     display: block;
 
@@ -44,7 +65,7 @@ $nav-border-color: #fff;
     }
   }
 
-  ul li a {
+  ul.navigation-list li a {
     background-color: $color-plastic;
   
     &[rel="external"] {
