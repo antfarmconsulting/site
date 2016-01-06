@@ -4,6 +4,11 @@
 
 $(document).ready(function () {
 
+  //PrettyPhoto (used for videos)
+  $("a[rel^='prettyPhoto']").prettyPhoto({
+    social_tools: ''
+  });
+
   //Navigation toggling
   var $navigation = $('.navigation');
 
@@ -12,6 +17,10 @@ $(document).ready(function () {
 
     $thisNav.find('.navigation-toggle, .close').on('click', function () {
       $thisNav.toggleClass('open');
+    });
+
+    $thisNav.find('.navigation-list a').on('click', function () {
+      $thisNav.removeClass('open');
     });
   });
 

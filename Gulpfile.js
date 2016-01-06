@@ -25,7 +25,8 @@ gulp.task('html', [], function () {
 gulp.task('copyflat', [], function () {
   return gulp
     .src([
-      'src/img/**/*'
+      'src/img/**/*',
+      'bower_components/prettyphoto/images/**/prettyPhoto/**/*'
     ])
       .pipe(gulp.dest('build/img'));
 });
@@ -48,6 +49,7 @@ gulp.task('js', function () {
   return gulp.src([
     'bower_components/jquery/dist/jquery.min.js',
     'bower_components/jQuery.Marquee/jquery.marquee.min.js',
+    'bower_components/prettyphoto/js/jquery.prettyPhoto.js',
     'src/js/custom.js'
   ])
     .pipe(concat('antfarm.js'))

@@ -1,0 +1,38 @@
+.video-thumbnail {
+  & {
+    display: inline-block;
+    position: relative;
+    width: 180px;
+    border: #939598 solid 5px;
+    margin-right: 16px;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  & > span {
+    display: block;
+
+    color: #fff;
+    background-color: $color-dirt;
+    font-family: $font-family-serif;
+    font-size: 16px;
+    padding: 2px 4px;
+    position: relative;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    &:before {
+      content: '> ';
+    }
+  }
+  & > img {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+}

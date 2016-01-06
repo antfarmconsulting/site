@@ -18,6 +18,7 @@ $screen-tablet-min: 768px;
 
 @import "../../bower_components/font-awesome/scss/font-awesome";
 
+@import "patterns/prettyphoto-base";
 
 @import "utilities";
 
@@ -29,11 +30,15 @@ $screen-tablet-min: 768px;
 
 @import "patterns/clients";
 
+@import "patterns/video-thumbnail";
+
 @import "patterns/homepage";
 @import "patterns/navigation";
 
 
 @import "patterns/page-contact";
+
+@import "patterns/prettyphoto-overrides";
 
 
 .pipe {
