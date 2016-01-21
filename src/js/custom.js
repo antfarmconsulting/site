@@ -6,7 +6,8 @@ $(document).ready(function () {
 
   //PrettyPhoto (used for videos)
   $("a[rel^='prettyPhoto']").prettyPhoto({
-    social_tools: ''
+    social_tools: '',
+    deeplinking: false
   });
 
   //Rel="external" links open new tab
