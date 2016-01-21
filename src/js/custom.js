@@ -28,17 +28,27 @@ $(document).ready(function () {
     });
   });
 
+  var tabs_data = [];
+
   //Tabs are scoped to the page level
   $('.page').each(function () {
-    var $page = $(this);
 
-    var $tabs_handles = $page.find('a.tab-handle');
-    var $tabs_contents = $page.find('.tab-content');
+    //Initialize variables
+    var $page,
+      $tabs_handles,
+      $tabs_contents,
+      matched_pairs;
+
+    //Default variable values
+    $page = $(this);
+
+    $tabs_handles = $page.find('a.tab-handle');
+    $tabs_contents = $page.find('.tab-content');
+
+    matched_pairs = [];
 
     //Show first tab by default and hide the rest
     $tabs_contents.not(':eq(0)').addClass('tab-hide');
-
-    var matched_pairs = [];
 
     $tabs_handles.each(function () {
       var $handle = $(this);
@@ -46,13 +56,28 @@ $(document).ready(function () {
 
       //If it's a hash fragment URL (e.g. #videography)
       if (0 === thisHref.indexOf('#')) {
-        var $match = $tabs_contents.filter('#' + thisHref.slice(1));
+        //just to be proper, reassemble ID selector (even though hash hrefs start with #);
+        var hash = thisHref.slice(1);
+
+        var $match = $tabs_contents.filter('#' + hash); 
 
         if(1 === $match.length) {
-          matched_pairs.push({
+          var data_obj = {
+            hash: hash,
+            title: $handle.find('.full').text(),
             handle: $handle,
-            content: $match
-          });
+            content: $match,
+            activateMe: function () {
+              $tabs_handles.not(this.handle).removeClass('active');
+              this.handle.addClass('active');
+
+              $tabs_contents.not(this.content).addClass('tab-hide');
+              this.content.removeClass('tab-hide');
+            }
+          };
+
+          matched_pairs.push(data_obj);
+          tabs_data.push(data_obj);
         }
         else
         {
@@ -67,24 +92,34 @@ $(document).ready(function () {
         //disable jump links
         event.preventDefault();
 
-        $tabs_handles.not(o.handle).removeClass('active');
-        o.handle.addClass('active');
-
-        $tabs_contents.not(o.content).addClass('tab-hide');
-        o.content.removeClass('tab-hide');
+        o.activateMe();
       });
     });
 
-    $tabs_handles.filter(':eq(0)').addClass('active');
-    $tabs_contents.not(':eq(0)').addClass('tab-hide');
+    if(matched_pairs.length > 0) {
+      matched_pairs[0].activateMe();
+    }
+  });
 
-    // console.log(
-    //   $page.find('.page-title').text(),
-    //   $tabs_handles.length,
-    //   $tabs_contents.length,
-    //   matched_pairs.length
-    // );
+  // console.log(tabs_data);
 
+
+  $(window).on('load hashchange', function() {
+    var newHash = (window.location.hash.length > 1) ? window.location.hash.slice(1) : null;
+    // console.log(newHash);
+
+    for(var i = 0; i < tabs_data.length; i++) {
+      var o = tabs_data[i];
+      if (newHash == o.hash) {
+        o.activateMe();
+          console.log($(o.handle).closest('.page').offset().top);
+          $(window).scrollTop(
+            $(o.handle).closest('.page').offset().top
+          );
+      }
+
+
+    }
   });
 
 
